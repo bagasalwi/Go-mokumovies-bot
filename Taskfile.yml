@@ -1,0 +1,23 @@
+version: "3"
+    
+tasks:
+    build:
+        desc: Build the app
+        cmds:
+        - GOFLAGS=-mod=mod go build -o bin/go-gopher-cli main.go 
+
+    run: 
+        desc: Run the app
+        cmds:
+        - GOFLAGS=-mod=mod go run main.go
+
+    bot:
+        desc: Execute the bot
+        cmds:
+        - go run main.go
+
+    buildandrun:
+        desc: Build and Run
+        cmds:
+        - GOFLAGS=-mod=mod go build -o bin/go-gopher-cli main.go 
+        - GOFLAGS=-mod=mod go run main.go
