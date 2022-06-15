@@ -1,21 +1,39 @@
-# Go mokumovies bot with OMDB API
+<div align="center">
+  <h2 align="center">GO MokuMovies Discord BOT</h2>
 
-## Pre-requisites
+  <p align="center">
+    A simple discord bot for getting movies and details built with GO and OMDB API
+  </p>
+</div>
 
-Install Go & taskfile.
+## Notes
 
-## Build the app
+Install Go & [taskfile](https://taskfile.dev), coz taskfile make u happy at building :D
 
-`$ go build -o bin/go-gopher-cli main.go`
+## Install
 
-or
+_Tutorial menggunakan bot ini di local dan menggunakan CLI lokal. Pastikan taskfile udah keinstall ya!!_
 
-`$ task build`
+1. Buat akun OMDB di https://www.omdbapi.com dan copy apikey-nya.
+2. Buat akun discord Developer, dan invite ke discord servermu.. ini lumayan makan waktu buatnya.. cari di google yak :P
+3. Buat config.json di dir utama dengan isi
+   ```sh
+   {
+    "token"  : "<Kode token discord bot mu>",
+    "api_token"  : "<token api ODMB api mu>"
+    }
+   ```
+3. jalankan ini di powershell / sbg. 
+   ```sh
+   task buildandrun - untuk build dan run sekaligus
+   task build - untuk build file main.go
+   task run - untuk run file yang sudah di build
+   ```
+4. Tada, sekarang kamu bisa gunakan !mokuhelp untuk isi list commandnya
 
-## Run the app
+## Yang digunakan disini
 
-Need Discord Token!!!
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-or you can go 
-
-`$ task run`
+* [Discordgo](https://github.com/bwmarrin/discordgo)
+* [OMBDBAPI](https://www.omdbapi.com)
